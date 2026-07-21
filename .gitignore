@@ -9,6 +9,10 @@
 !icon.png
 !CHANGELOG.md
 !COMPATIBILITY.md
+!README.en.md
+!docs/
+!docs/screenshots/
+!docs/screenshots/**
 !PLAN-fcpxml-redesign.md
 !TITLE-GENERATION-BIBLE.md
 !PLAN-v0.12-rebuild.md
