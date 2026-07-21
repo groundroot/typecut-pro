@@ -1,4 +1,4 @@
-<p align="right">🇰🇷 <b>한국어</b> · <a href="README.en.md">🇺🇸 English</a></p>
+<p align="right">🇰🇷 <b>한국어</b> · <a href="README.en.md">🇺🇸 English</a> · <a href="README.ja.md">🇯🇵 日本語</a></p>
 
 <p align="center">
   <img src="icon.png" width="128" alt="FCP AutoCut 앱 아이콘" />
