@@ -1,4 +1,4 @@
-<p align="right"><a href="README.md">🇰🇷 한국어</a> · 🇺🇸 <b>English</b></p>
+<p align="right"><a href="README.md">🇰🇷 한국어</a> · 🇺🇸 <b>English</b> · <a href="README.ja.md">🇯🇵 日本語</a></p>
 
 <p align="center">
   <img src="icon.png" width="128" alt="FCP AutoCut app icon" />
@@ -9,21 +9,21 @@
 <p align="center">
   <b>Drag your Final Cut project in — it removes silence, adds captions, and lets you edit the video as text</b><br>
   then hands it back to Final Cut Pro. The boring half of cut editing, done in minutes.<br>
-  <b>Everything runs on your Mac.</b> Your footage never leaves your machine.
+  <b>Video and audio are always processed on your Mac.</b> Your footage never leaves your machine.
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/macOS-14.0%2B-000000?logo=apple&logoColor=white" alt="macOS 14.0+" />
   <img src="https://img.shields.io/badge/Apple%20Silicon-M1%20or%20later-F05138?logo=apple&logoColor=white" alt="Apple Silicon only" />
   <img src="https://img.shields.io/badge/Final%20Cut%20Pro-12.2–12.3-8E44AD" alt="Final Cut Pro 12.2–12.3" />
-  <img src="https://img.shields.io/badge/AI-100%25%20on--device-2E7D32" alt="100% on-device AI" />
+  <img src="https://img.shields.io/badge/AI-on--device%20first-2E7D32" alt="On-device first AI" />
   <img src="https://img.shields.io/github/v/release/groundroot/fcp-autocut?label=beta&color=1E6FD9" alt="Latest release" />
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Proprietary-666666" alt="License: Proprietary" /></a>
 </p>
 
 <p align="center">
   <img src="docs/screenshots/en/main-window.png" width="820" alt="FCP AutoCut main window" />
-  <br><sub>Main window — pick options in the sidebar (<b>Step 1: Speech Analysis → Step 2: Captions · Output</b>), drop your project onto the dashed box, done. Rarely-used options stay folded under <b>Advanced Options</b>.</sub>
+  <br><sub>Main window — pick your speech-recognition, caption, and output options in the sidebar, drop your project onto the dashed box, done. Rarely-used options stay folded under <b>Advanced Options</b>.</sub>
 </p>
 
 ---
@@ -50,7 +50,7 @@ Anyone editing <b>talk-heavy long-form</b> in Final Cut Pro — interviews, lect
 ## Why FCP AutoCut
 
 - **⚡ No export step** — other tools make you **render the video or extract audio** before they can transcribe. FCP AutoCut deletes that entire step: **drag the project you're editing** and it analyzes your cut timeline's audio directly — going straight from **caption generation to Text-Based Editing**.
-- **🔒 100% on your Mac** — speech recognition, captions, editing, AI cleanup: all on-device. Nothing is uploaded.
+- **🔒 Video always stays on your Mac** — speech recognition, captions, and editing are on-device by default. Video and audio are never uploaded; only if you set the AI agent to a cloud model does the transcript text get sent.
 - **♻️ Fully non-destructive** — results always come back as a **new project**. Adjustment layers, B-roll, connected storylines, and your cut structure are preserved.
 - **🎬 Native to Final Cut** — captions are generated as **native FCP titles** from the start, so there's nothing to swap and nothing drifts on mixed frame rates.
 - **👀 What you see is what you get** — caption size and position in the app match **Final Cut's actual render 1:1**.
@@ -80,7 +80,7 @@ Automatically finds and removes the gaps between phrases. **Cut strength (gentle
 
 ### 📝 Transcript Editor — edit video like a document
 
-When analysis finishes, the **[Edit Transcript]** button opens a **window that feels like a word processor**. Read the transcript, delete what you don't need, and **that span is cut from the timeline**. Your words are never rewritten, and every edit is undoable with **⌘Z**.
+When analysis finishes, the same window turns into the **transcript editor** in place — no separate window. Read the transcript, delete what you don't need, and **that span is cut from the timeline**. Your words are never rewritten, and every edit is undoable with **⌘Z**.
 
 <p align="center">
   <img src="docs/screenshots/en/transcript-editor.png" width="820" alt="Transcript editor — transcript, preview, waveform, AI agent" />
@@ -168,8 +168,8 @@ Hand the editing to the AI on the left side of the Transcript Editor. **It never
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/en/result.png" width="820" alt="Done screen — result file and Edit Transcript button" />
-  <br><sub>Done — drag the result <b>straight into Final Cut</b>. Continue with <b>[Edit Transcript]</b>, or tweak options and <b>Re-export</b> in seconds without re-analysis.</sub>
+  <img src="docs/screenshots/en/result.png" width="820" alt="Bottom result bar — result file and re-export/edit options" />
+  <br><sub>Bottom result bar — no screen change needed: keep editing the transcript right there, or drag the result <b>straight into Final Cut</b>. Tweak options and <b>Re-export</b> in seconds without re-analysis, right from here.</sub>
 </p>
 
 > Depending on options you'll get **① the original timeline + captions**, and/or **② a silence-cut / edited timeline + captions**.
@@ -184,7 +184,7 @@ Hand the editing to the AI on the left side of the Transcript Editor. **It never
 
 ## Privacy
 
-All AI processing is on-device. The app works without a network connection; your video and audio are never uploaded anywhere.
+Speech recognition, captions, silence-cut, transcript editing, and the AI agent (local model by default) all run on your Mac. Video and audio are never uploaded. Network access is used only for the first-time AI model download, update checks, and feedback/purchase actions you trigger yourself. **Exception (opt-in):** only if you set the AI agent to a cloud model (OpenAI/Gemini/Claude) is the **transcript text** sent to that provider (video/audio still never leave your Mac). With the default local model, nothing is sent.
 
 ## Feedback 🙏
 
