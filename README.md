@@ -1,4 +1,4 @@
-<p align="right">🇰🇷 <b>한국어</b> · <a href="README.en.md">🇺🇸 English</a></p>
+<p align="right">🇰🇷 <b>한국어</b> · <a href="README.en.md">🇺🇸 English</a> · <a href="README.ja.md">🇯🇵 日本語</a></p>
 
 <p align="center">
   <img src="icon.png" width="128" alt="FCP AutoCut 앱 아이콘" />
@@ -9,14 +9,14 @@
 <p align="center">
   <b>파이널컷 프로젝트를 드래그하면 — 무음을 잘라내고, 자막을 입히고, 대본까지 텍스트로 편집해</b><br>
   다시 파이널컷으로 돌려주는 맥앱. 컷 편집의 지루한 뒷일을 몇 분으로 줄여줍니다.<br>
-  <b>모든 처리는 내 Mac 안에서만.</b> 영상이 외부 서버로 나가지 않습니다.
+  <b>영상·음성은 항상 내 Mac 안에서만 처리됩니다.</b> 외부 서버로 나가지 않습니다.
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/macOS-14.0%2B-000000?logo=apple&logoColor=white" alt="macOS 14.0+" />
   <img src="https://img.shields.io/badge/Apple%20Silicon-M1%20이상%20전용-F05138?logo=apple&logoColor=white" alt="Apple Silicon 전용" />
   <img src="https://img.shields.io/badge/Final%20Cut%20Pro-12.2–12.3-8E44AD" alt="Final Cut Pro 12.2–12.3" />
-  <img src="https://img.shields.io/badge/AI-100%25%20온디바이스-2E7D32" alt="100% 온디바이스 AI" />
+  <img src="https://img.shields.io/badge/AI-온디바이스%20우선-2E7D32" alt="온디바이스 우선 AI" />
   <img src="https://img.shields.io/github/v/release/groundroot/fcp-autocut?label=beta&color=1E6FD9" alt="최신 버전" />
   <img src="https://img.shields.io/github/downloads/groundroot/fcp-autocut/total?label=%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C&color=555" alt="총 다운로드" />
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Proprietary-666666" alt="License: Proprietary" /></a>
@@ -24,7 +24,7 @@
 
 <p align="center">
   <img src="docs/screenshots/main-window.png" width="820" alt="FCP AutoCut 메인 화면 — 옵션 사이드바와 드래그 존" />
-  <br><sub>메인 화면 — 왼쪽 사이드바에서 <b>1단계(음성 분석) → 2단계(자막·출력)</b> 순서로 옵션을 고르고, 프로젝트를 점선 박스에 떨어뜨리면 끝. 자주 안 쓰는 옵션은 <b>고급 옵션</b>에 접혀 있습니다.</sub>
+  <br><sub>메인 화면 — 왼쪽 사이드바에서 음성 인식·자막·출력 옵션을 고르고, 프로젝트를 점선 박스에 떨어뜨리면 끝. 자주 안 쓰는 옵션은 <b>고급 옵션</b>에 접혀 있습니다.</sub>
 </p>
 
 ---
@@ -54,7 +54,7 @@
 ## 왜 FCP AutoCut인가
 
 - **⚡ 내보내기 과정이 없다** — 다른 도구는 음성 인식을 위해 **영상을 렌더링하거나 오디오를 따로 추출**해서 넣어야 하죠. FCP AutoCut은 그 과정이 통째로 사라집니다. **편집하던 프로젝트를 그대로 드래그**하면, 컷편집된 타임라인의 오디오를 그대로 분석해 **자막 생성부터 Text-Based Editing(대본 기반 편집)까지** 바로 이어집니다.
-- **🔒 100% 내 Mac에서** — 음성 인식·자막·편집·AI 정리까지 전부 온디바이스. 영상·음성이 밖으로 나가지 않습니다.
+- **🔒 영상은 항상 내 Mac에서** — 음성 인식·자막·편집은 기본적으로 온디바이스. 영상·음성은 밖으로 나가지 않으며, AI 에이전트를 클라우드 모델로 직접 설정한 경우에만 대본 텍스트가 전송됩니다.
 - **♻️ 완전 비파괴** — 결과는 항상 **새 프로젝트**로 나옵니다. 어저스트먼트 레이어·B롤·보조 스토리라인·컷 구조를 그대로 보존해요.
 - **🎬 파이널컷에 딱 맞게** — 자막이 처음부터 **FCP 네이티브 타이틀**로 만들어져 교체할 필요가 없고, 혼합 프레임레이트에서도 어긋나지 않습니다.
 - **👀 보이는 그대로** — 앱에서 본 자막 크기·위치가 **파이널컷 실제 렌더와 1:1로 일치**합니다.
@@ -84,7 +84,7 @@
 
 ### 📝 대본 편집기 — 영상을 '글'처럼 편집
 
-분석이 끝나면 **[대본 편집]** 버튼으로 **문서 편집기 같은 창**이 열립니다. 대본을 읽으며 필요 없는 부분을 지우면, **그 구간이 타임라인에서 잘려** 나옵니다. 원문 텍스트는 절대 바뀌지 않고, 모든 편집은 **⌘Z로 복원**돼요.
+분석이 끝나면 별도 창 없이 **같은 화면이 그대로 대본 편집기**로 바뀝니다. 대본을 읽으며 필요 없는 부분을 지우면, **그 구간이 타임라인에서 잘려** 나옵니다. 원문 텍스트는 절대 바뀌지 않고, 모든 편집은 **⌘Z로 복원**돼요.
 
 <p align="center">
   <img src="docs/screenshots/transcript-editor.png" width="820" alt="대본 편집기 — 대본 · 프리뷰 · 파형 · AI 에이전트" />
@@ -171,8 +171,8 @@
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/result.png" width="820" alt="완료 화면 — 결과 파일과 대본 편집 버튼" />
-  <br><sub>완료 — 결과 파일을 <b>그대로 파이널컷에 드래그</b>하면 끝. 여기서 <b>[대본 편집]</b>으로 이어가거나, 옵션을 바꿔 <b>다시 내보내기</b>(재분석 없이 몇 초)도 됩니다.</sub>
+  <img src="docs/screenshots/result.png" width="820" alt="하단 결과 바 — 결과 파일과 대본 편집·다시 내보내기 버튼" />
+  <br><sub>하단 결과 바 — 화면 전환 없이 그대로 대본을 계속 편집하거나, 결과 파일을 <b>파이널컷에 드래그</b>. 옵션을 바꿔 <b>다시 내보내기</b>(재분석 없이 몇 초)도 여기서 됩니다.</sub>
 </p>
 
 > 결과물은 상황에 따라 **① 원본 타임라인 + 자막**, **② 무음/편집으로 압축된 타임라인 + 자막** 으로 나옵니다.
@@ -194,7 +194,7 @@
 - **자막 인식·정밀 타이밍**: 영상 길이에 비례 (M1 기준 대략 실시간의 몇 배 빠르게 처리)
 - **무음컷·자막 분리·군소리 컷·고유명사 교정**: 규칙 기반이라 **즉시** (모델 불필요)
 - **AI 에이전트**(요약·SEO 구조·구두점): 로컬 AI 모델을 쓰므로 대본 길이에 따라 수 초~수십 초 (첫 실행은 모델 로딩으로 조금 더)
-- 처리 시간은 완료 화면에 **"소요 시간"**으로 표시됩니다
+- 처리 시간은 하단 결과 바에 **"소요 시간"**으로 표시됩니다
 
 ## 업데이트
 
