@@ -178,7 +178,7 @@ footer a{color:var(--muted);text-decoration:underline}
       <a href="#style">자막 스타일</a>
       <a href="#howto">사용법</a>
       <a href="en/" onclick="try{localStorage.setItem('fcpa-lang','en')}catch(e){}" title="View in English">🇺🇸 English</a>
-      <a href="https://github.com/groundroot/typecut-pro/releases" class="dl">다운로드</a>
+      <a href="https://github.com/groundroot/typecut-pro/releases/download/v0.13.0/TypeCut-Pro-beta-v0.13.0.dmg" class="dl">다운로드</a>
     </div>
   </div>
 </nav>
@@ -189,7 +189,7 @@ footer a{color:var(--muted);text-decoration:underline}
     <h1>파이널컷 편집의 뒷일,<br><span class="grad">드래그 한 번</span>으로 끝.</h1>
     <p class="tag">프로젝트를 드래그하면 — <b>무음을 잘라내고, 자막을 입히고, 대본까지 텍스트로 편집</b>해 다시 파이널컷으로 돌려주는 맥앱. <b>모든 처리는 내 Mac 안에서만.</b> 영상이 외부 서버로 나가지 않습니다.</p>
     <div class="cta">
-      <a class="btn primary" href="https://github.com/groundroot/typecut-pro/releases">⬇ 최신 베타 받기 (DMG)</a>
+      <a class="btn primary" href="https://github.com/groundroot/typecut-pro/releases/download/v0.13.0/TypeCut-Pro-beta-v0.13.0.dmg">⬇ 베타 v0.13.0 받기 (DMG)</a>
       <a class="btn ghost" href="https://open.kakao.com/o/grDKAwCi">💬 베타 오픈채팅 참여</a>
     </div>
     <div class="badges">
@@ -197,7 +197,7 @@ footer a{color:var(--muted);text-decoration:underline}
       <span>100% 온디바이스 AI</span><span>English · 한국어</span>
     </div>
     <div class="shot"><img src="screenshots/main-window.png" alt="TypeCut Pro 메인 화면"></div>
-    <p class="caption">메인 화면 — 사이드바에서 <b>1단계(음성 분석) → 2단계(자막·출력)</b> 옵션을 고르고, 프로젝트를 점선 박스에 떨어뜨리면 끝.</p>
+    <p class="caption">v0.13.0 메인 화면 — 창 어디에나 프로젝트를 떨어뜨리면 즉시 분석하고, 대본·뷰어·옵션을 한 화면에서 이어서 편집합니다.</p>
   </div>
 </header>
 
@@ -261,7 +261,7 @@ footer a{color:var(--muted);text-decoration:underline}
   <div class="wrap">
     <p class="kicker">Transcript Editor</p>
     <h2>📝 대본 편집기 — 영상을 '글'처럼 편집</h2>
-    <p class="lead">분석이 끝나면 <b style="color:var(--text)">[대본 편집]</b> 버튼으로 문서 편집기 같은 창이 열립니다. 대본을 읽으며 필요 없는 부분을 지우면, <b style="color:var(--text)">그 구간이 타임라인에서 잘려</b> 나옵니다. 모든 편집은 ⌘Z로 복원.</p>
+    <p class="lead">편집기는 처음부터 상시 열려 있습니다. 분석 중에는 뷰어 위 진행 상태를, 완료 후에는 하단 결과를 보여줍니다. 대본을 읽으며 필요 없는 부분을 지우면 <b style="color:var(--text)">그 구간이 타임라인에서 잘려</b> 나오고, 모든 편집은 ⌘Z로 복원됩니다.</p>
 
     <div class="feature">
       <div class="txt">
@@ -279,15 +279,15 @@ footer a{color:var(--muted);text-decoration:underline}
 
     <div class="feature rev">
       <div class="txt">
-        <h3>💬 자막 뷰 — 자막 단위로 다듬기 <span style="font-size:13px;color:var(--muted)">(CapCut 스타일)</span></h3>
+        <h3>💬 집중 대본 뷰 — 글에만 몰입해 다듬기</h3>
         <ul>
-          <li>실제 출력될 <b>자막 한 장 = 카드 한 장</b>, 번호·타임코드 표시</li>
-          <li><b>자막 맨 앞에서 ⌫</b> = 앞 자막과 병합 · <b>⌘Enter</b> = 커서에서 분리</li>
-          <li>툴바 <b>길이 슬라이더 + 2줄 토글</b>로 자막 수 즉시 조절</li>
-          <li>병합·분리한 경계는 <b>출력 결과에 그대로 반영</b></li>
+          <li><b>전체보기</b>로 뷰어와 인스펙터를 숨겨 넓은 문서처럼 편집</li>
+          <li><b>Enter</b> = 커서에서 자막 나누기 · 자막 첫 글자에서 <b>⌫</b> = 앞 자막과 합치기</li>
+          <li>툴바에서 <b>자막 길이 + 2줄 토글</b>을 바로 조절</li>
+          <li><b>Tab</b> = 다음 군소리 · <b>Space</b> = 커서 위치부터 재생</li>
         </ul>
       </div>
-      <figure class="pic"><img src="screenshots/caption-cards.png" alt="자막 카드 편집 뷰" loading="lazy"></figure>
+      <figure class="pic"><img src="screenshots/caption-cards.png" alt="전체 화면 집중 대본 편집 뷰" loading="lazy"></figure>
     </div>
 
     <div class="feature">
@@ -295,7 +295,7 @@ footer a{color:var(--muted);text-decoration:underline}
         <h3>🤖 AI 에이전트 — 말하면 대신 편집</h3>
         <p class="sub">텍스트는 절대 바꾸지 않고 필요한 부분만 잘라내며, 결과는 언제든 검토·복원할 수 있습니다.</p>
         <ul>
-          <li><b>요약 & 발췌</b> — "핵심만" · "5분으로" · "매출 얘기만 남겨줘"</li>
+          <li><b>요약 &amp; 발췌</b> — "핵심만" · "5분으로" · "매출 얘기만 남겨줘"</li>
           <li><b>Google SEO 구조 정리</b> — H2·H3 목차 생성, 섹션 통째 삭제</li>
           <li><b>구두점 넣기</b> — 마침표·물음표·쉼표를 명문화된 규칙대로</li>
           <li><b>기본은 오프라인</b> — 원하면 OpenAI·Gemini·Claude API 키 연결</li>
@@ -308,8 +308,8 @@ footer a{color:var(--muted);text-decoration:underline}
 
 <section id="style">
   <div class="wrap">
-    <p class="kicker">Subtitle Style & Titles</p>
-    <h2>🎨 자막 스타일 & 타이틀 — 처음부터 완성형</h2>
+    <p class="kicker">Subtitle Style &amp; Titles</p>
+    <h2>🎨 자막 스타일 &amp; 타이틀 — 처음부터 완성형</h2>
 
     <div class="feature">
       <div class="txt">
@@ -363,8 +363,8 @@ footer a{color:var(--muted);text-decoration:underline}
     <p class="kicker">How to use</p>
     <h2>사용법 — 3단계</h2>
     <div class="steps">
-      <div class="step"><div class="n">1</div><h3>넣기</h3><p>파이널컷에서 프로젝트를 잡아 앱의 점선 박스로 드래그</p></div>
-      <div class="step"><div class="n">2</div><h3>실행</h3><p>원하는 옵션을 켠 뒤 실행. 진행 상황과 남은 시간이 표시됩니다</p></div>
+      <div class="step"><div class="n">1</div><h3>넣기</h3><p>파이널컷 프로젝트나 .fcpxml(d) 파일을 앱 창 어디에나 드래그</p></div>
+      <div class="step"><div class="n">2</div><h3>자동 분석</h3><p>입력 즉시 분석. 편집기 뷰어 위에 단계별 진행 상황과 남은 시간이 표시됩니다</p></div>
       <div class="step"><div class="n">3</div><h3>돌려받기</h3><p>결과 파일을 잡아 파이널컷으로 드래그 → 새 프로젝트로 import (원본 비파괴)</p></div>
     </div>
     <div class="dualshot">
@@ -380,32 +380,21 @@ footer a{color:var(--muted);text-decoration:underline}
 <section>
   <div class="wrap">
     <p class="kicker">Requirements</p>
-    <h2>설치 & 요구 사항</h2>
+    <h2>설치 &amp; 요구 사항</h2>
     <div class="req">
       <div class="tile"><b>Mac</b><span>Apple Silicon (M1 이상) — Intel 미지원</span></div>
       <div class="tile"><b>macOS</b><span>14 (Sonoma) 이상</span></div>
       <div class="tile"><b>Final Cut Pro</b><span>10.x ~ 12.3</span></div>
       <div class="tile"><b>디스크</b><span>최초 1회 AI 음성 모델 약 3.5GB</span></div>
     </div>
-    <p class="caption" style="text-align:left;margin-top:20px">
-      DMG를 열고 앱을 Applications로 드래그하면 설치 끝.
-      설치 후에는 <b>앱 안의 "지금 업데이트"</b> 버튼으로 이후 버전을 바로 받을 수 있어요.
-      성능·개인정보: 모든 AI 처리는 온디바이스로, 네트워크 연결 없이 동작합니다.
-    </p>
-
-    <h3 style="margin-top:44px;font-size:19px;font-weight:800">🔓 "확인되지 않은 개발자" 경고가 뜬다면 — 한 번만 이렇게</h3>
-    <p class="caption" style="text-align:left;margin-top:8px">
-      베타 버전은 아직 Apple 공증(notarization) 전이라, 처음 열 때 macOS가 실행을 한 번 차단합니다.
-      아래 순서대로 허용해 주세요. <b>최초 1회만 필요</b>하고, 이후에는 더블클릭으로 바로 열립니다.
-    </p>
-    <div class="steps" style="margin-top:20px">
-      <div class="step"><div class="n">1</div><h3>일단 한 번 실행</h3><p>Applications에서 <b>TypeCut Pro를 더블클릭</b> → "열 수 없습니다" 경고가 뜨면 <b>완료(확인)</b>를 누릅니다. 이 시도가 있어야 다음 단계 버튼이 나타나요.</p></div>
-      <div class="step"><div class="n">2</div><h3>설정에서 허용</h3><p><b>시스템 설정 → 개인정보 보호 및 보안</b>으로 가서 아래로 스크롤 → "'TypeCut Pro'이(가) 차단되었습니다" 옆의 <b>그래도 열기</b>를 클릭합니다.</p></div>
-      <div class="step"><div class="n">3</div><h3>암호 입력 후 열기</h3><p>관리자 암호(또는 Touch ID)를 입력하고 <b>열기</b>를 누르면 실행됩니다. 다음부터는 경고 없이 바로 열려요.</p></div>
+    <div class="steps" style="margin-top:24px">
+      <div class="step"><div class="n">1</div><h3>DMG 열기</h3><p><b>TypeCut Pro beta v0.13.0</b> DMG를 다운로드해 엽니다.</p></div>
+      <div class="step"><div class="n">2</div><h3>Applications로 복사</h3><p>TypeCut Pro를 <b>Applications 폴더로 드래그</b>하면 설치가 끝납니다.</p></div>
+      <div class="step"><div class="n">3</div><h3>첫 실행</h3><p>앱을 열고 온디바이스 음성 모델을 한 번 다운로드한 뒤 프로젝트를 드롭합니다.</p></div>
     </div>
-    <p class="caption" style="text-align:left;margin-top:16px">
-      💡 이 경고는 앱에 문제가 있어서가 아니라, 베타가 아직 Apple의 공증 절차를 거치지 않았기 때문에 나오는 표준 안내입니다.
-      막히는 부분이 있으면 <a href="https://open.kakao.com/o/grDKAwCi">베타 오픈채팅</a>에서 바로 도와드려요.
+
+    <p class="caption" style="text-align:left;margin-top:20px">
+      v0.13.0은 <b>Apple 공증(notarization)을 완료</b>했습니다. 별도의 보안 해제 절차 없이 실행할 수 있고, 이후 버전은 앱 안의 업데이트 버튼으로 받을 수 있습니다. 음성 인식·자막·편집 처리는 모두 Mac 안에서 동작합니다.
     </p>
   </div>
 </section>
@@ -414,7 +403,7 @@ footer a{color:var(--muted);text-decoration:underline}
   <div class="wrap" style="padding-top:20px;padding-bottom:20px">
     <h2>컷 편집의 지루한 뒷일,<br>이제 몇 분이면 됩니다.</h2>
     <div class="cta">
-      <a class="btn primary" href="https://github.com/groundroot/typecut-pro/releases">⬇ 최신 베타 받기</a>
+      <a class="btn primary" href="https://github.com/groundroot/typecut-pro/releases/download/v0.13.0/TypeCut-Pro-beta-v0.13.0.dmg">⬇ 베타 v0.13.0 받기</a>
       <a class="btn ghost" href="https://github.com/groundroot/typecut-pro">GitHub에서 보기</a>
     </div>
     <p class="caption" style="margin-top:20px">💬 설치 도움 · 버그 제보 · 기능 요청 — <a href="https://open.kakao.com/o/grDKAwCi">카카오톡 베타 오픈채팅</a></p>

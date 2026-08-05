@@ -23,7 +23,7 @@
   <link rel="alternate" hreflang="x-default" href="https://groundroot.github.io/typecut-pro/en/">
   <link rel="icon" href="../icon.png">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"TypeCut Pro","applicationCategory":"MultimediaApplication","operatingSystem":"macOS 14 or later","softwareVersion":"0.12.82 beta","downloadUrl":"https://github.com/groundroot/typecut-pro/releases/latest","description":"On-device silence removal, native captions, and text-based editing for Final Cut Pro.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"TypeCut Pro","applicationCategory":"MultimediaApplication","operatingSystem":"macOS 14 or later","softwareVersion":"0.13.0 beta","downloadUrl":"https://github.com/groundroot/typecut-pro/releases/download/v0.13.0/TypeCut-Pro-beta-v0.13.0.dmg","description":"On-device silence removal, native captions, and text-based editing for Final Cut Pro.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
   </script>
   <script>
     (function () {
@@ -233,8 +233,9 @@
     .caption-demo .wrap { display: grid; grid-template-columns: .72fr 1.28fr; gap: 80px; align-items: center; }
     .caption-stack { position: relative; min-height: 500px; }
     .caption-stack .media { position: absolute; width: 92%; }
-    .caption-stack .media:first-child { top: 0; left: 0; transform: rotate(-1.2deg); }
-    .caption-stack .media:last-child { right: 0; bottom: 0; transform: rotate(1.4deg); box-shadow: 0 35px 80px rgba(0,0,0,.55); }
+    .caption-stack .media:first-child { top: 0; left: 0; z-index: 1; transform: rotate(-1.2deg); }
+    .caption-stack .media:nth-child(2) { top: 50%; left: 50%; z-index: 2; transform: translate(-48%, -50%) rotate(.4deg); }
+    .caption-stack .media:last-child { right: 0; bottom: 0; z-index: 3; transform: rotate(1.4deg); box-shadow: 0 35px 80px rgba(0,0,0,.55); }
     .caption-copy h2 { font-size: clamp(40px, 5vw, 68px); line-height: .98; letter-spacing: -.055em; margin: 0; }
     .caption-copy p { color: var(--muted); font-size: 17px; }
 
@@ -345,7 +346,7 @@
           <h1>The boring half <span class="quiet">of editing, automated.</span></h1>
           <p class="intro">Drop in your Final Cut project. TypeCut Pro <strong>cuts dead air, creates native captions, and turns the timeline into editable text</strong> — then hands it back without touching your original.</p>
           <div class="actions">
-            <a class="button button-primary" href="https://github.com/groundroot/typecut-pro/releases/download/v0.12.82/TypeCut-Pro-beta-v0.12.82.dmg">Download beta v0.12.82</a>
+            <a class="button button-primary" href="https://github.com/groundroot/typecut-pro/releases/download/v0.13.0/TypeCut-Pro-beta-v0.13.0.dmg">Download beta v0.13.0</a>
             <a class="button button-secondary" href="#workflow">See the 3-step workflow</a>
           </div>
           <div class="meta" aria-label="System requirements summary">
@@ -375,13 +376,13 @@
         <div class="workflow-grid">
           <article class="workflow-step">
             <span class="num">01 / FINAL CUT</span>
-            <h2>Drag the project in</h2>
-            <p>Use the project you are already editing. No render or audio extraction.</p>
+            <h2>Drop the project anywhere</h2>
+            <p>Drop your Final Cut project or .fcpxml(d) anywhere in the window. No render or audio extraction.</p>
           </article>
           <article class="workflow-step">
             <span class="num">02 / AUTOCUT</span>
-            <h2>Choose what to automate</h2>
-            <p>Cut silence, generate captions, or open the transcript editor.</p>
+            <h2>Analysis starts immediately</h2>
+            <p>Progress stays over the viewer while the transcript editor remains ready underneath.</p>
           </article>
           <article class="workflow-step">
             <span class="num">03 / BACK TO FINAL CUT</span>
@@ -454,11 +455,11 @@
           <div class="feature-copy">
             <span class="feature-index">03 — TEXT-BASED EDITING</span>
             <h3>Read the cut. Delete the parts you do not need.</h3>
-            <p>The transcript editor links every word to the timeline. Select text, press delete, and that span is cut from the new project.</p>
+            <p>The always-mounted three-pane editor links every word to the timeline. Select text, press delete, and that span is cut from the new project.</p>
             <ul>
-              <li>Document view and caption-card view</li>
-              <li>Video preview, live captions, and waveform</li>
-              <li>Undoable edits with Command-Z</li>
+              <li>Transcript, viewer, and AI or output inspector in one workspace</li>
+              <li>One-click full transcript view for focused editing</li>
+              <li>Split and merge captions with the keyboard; undo with Command-Z</li>
             </ul>
           </div>
           <figure class="media">
@@ -473,18 +474,22 @@
       <div class="wrap">
         <div class="caption-stack" aria-label="Caption editing and styling screens">
           <figure class="media">
-            <figcaption class="media-label"><span>Caption cards</span><span>Keyboard editable</span></figcaption>
-            <img src="../screenshots/en/caption-cards.png" alt="Caption card editing view with numbered timecoded captions" loading="lazy">
+            <figcaption class="media-label"><span>Full transcript view</span><span>Keyboard editable</span></figcaption>
+            <img src="../screenshots/en/caption-cards.png" alt="Full-width transcript editing view with keyboard controls" loading="lazy">
           </figure>
           <figure class="media">
-            <figcaption class="media-label"><span>Subtitle style</span><span>WYSIWYG preview</span></figcaption>
-            <img src="../screenshots/en/subtitle-tuner.png" alt="Subtitle style editor with a live vertical-video preview" loading="lazy">
+            <figcaption class="media-label"><span>Output inspector</span><span>Instant re-export</span></figcaption>
+            <img src="../screenshots/en/subtitle-tuner.png" alt="Subtitle and output inspector beside the transcript and viewer" loading="lazy">
+          </figure>
+          <figure class="media">
+            <figcaption class="media-label"><span>Final Cut titles</span><span>Built-in + installed</span></figcaption>
+            <img src="../screenshots/en/title-picker.png" alt="Final Cut Pro title picker inside the output inspector" loading="lazy">
           </figure>
         </div>
         <div class="caption-copy">
           <p class="eyebrow">Finish, do not fix</p>
-          <h2 id="caption-title">See the caption before it hits the timeline.</h2>
-          <p>Adjust length, two-line mode, size, position, and title style with a live preview. TypeCut Pro detects horizontal and vertical projects and shows social safe zones where they matter.</p>
+          <h2 id="caption-title">Edit the words and the output without leaving the workspace.</h2>
+          <p>Switch between the AI agent and output inspector beside the transcript and viewer. Adjust caption length, two-line mode, size, position, silence cuts, roles, and storyline output; changes re-export in seconds without another analysis.</p>
           <p>Already have a favorite Final Cut title? Choose it — including third-party titles — and generate captions with its native values from the start.</p>
         </div>
       </div>
@@ -505,10 +510,10 @@
         <div>
           <div class="install-card">
             <article class="install-step"><span class="step-number">1</span><div><h3>Download and move to Applications</h3><p>Open the DMG, then drag TypeCut Pro into your Applications folder.</p></div></article>
-            <article class="install-step"><span class="step-number">2</span><div><h3>Allow the current beta once</h3><p>Open the app, dismiss the macOS alert, then go to System Settings → Privacy &amp; Security → Open Anyway. Enter your Mac password when asked.</p></div></article>
+            <article class="install-step"><span class="step-number">2</span><div><h3>Launch TypeCut Pro</h3><p>Open it normally from Applications. Version 0.13.0 is Apple-notarized, so no “Open Anyway” workaround is required.</p></div></article>
             <article class="install-step"><span class="step-number">3</span><div><h3>Download the speech model</h3><p>The first launch downloads the on-device speech model once. After that, the core workflow works offline.</p></div></article>
           </div>
-          <p class="beta-note"><strong>Transparent beta note:</strong> the current build is not yet Apple-notarized, so macOS requires the one-time “Open Anyway” step above. Notarization is in progress; the app itself still runs locally and does not upload your media.</p>
+          <p class="beta-note"><strong>Beta v0.13.0:</strong> Apple-notarized and ready to launch normally. Speech recognition, caption generation, and editing stay on your Mac; your media is not uploaded.</p>
         </div>
       </div>
     </section>
@@ -518,7 +523,7 @@
         <h2 id="final-title">Spend your edit on the story, not the cleanup.</h2>
         <p>TypeCut Pro is free while in beta.</p>
         <div class="actions">
-          <a class="button button-primary" href="https://github.com/groundroot/typecut-pro/releases/download/v0.12.82/TypeCut-Pro-beta-v0.12.82.dmg">Download for Apple Silicon</a>
+          <a class="button button-primary" href="https://github.com/groundroot/typecut-pro/releases/download/v0.13.0/TypeCut-Pro-beta-v0.13.0.dmg">Download beta v0.13.0</a>
           <a class="button button-secondary" href="https://github.com/groundroot/typecut-pro/issues">Questions &amp; feedback</a>
         </div>
       </div>
