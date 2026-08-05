@@ -186,8 +186,8 @@ Hand the editing to the AI on the left side of the Transcript Editor. **It never
 ## Install & first launch
 
 1. Open the DMG and drag **TypeCut Pro** into **Applications**
-2. **Allow it once** — the beta isn't Apple-notarized yet, so macOS blocks the first launch:
-   double-click the app → click **Done** on the alert → **System Settings → Privacy & Security** → **Open Anyway** → enter your password. From then on it opens normally.
+2. Double-click to launch — **the build is Apple-notarized, so it opens without a security warning.**
+   (If you do see one, an older copy is probably still around: `xattr -cr "/Applications/TypeCut Pro.app"`)
 3. On first run the app downloads the AI speech model (~3.5GB) once — after that everything works offline.
 
 ## Privacy
