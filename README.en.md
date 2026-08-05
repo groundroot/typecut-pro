@@ -1,15 +1,23 @@
 <p align="right"><a href="README.md">🇰🇷 한국어</a> · 🇺🇸 <b>English</b> · <a href="README.ja.md">🇯🇵 日本語</a></p>
 
 <p align="center">
-  <img src="icon.png" width="128" alt="FCP AutoCut app icon" />
+  <img src="icon.png" width="128" alt="TypeCut Pro app icon" />
 </p>
 
-<h1 align="center">FCP AutoCut <sub>(beta)</sub></h1>
+<h1 align="center">TypeCut Pro <sub>(beta)</sub></h1>
 
 <p align="center">
-  <b>Drag your Final Cut project in — it removes silence, adds captions, and lets you edit the video as text</b><br>
-  then hands it back to Final Cut Pro. The boring half of cut editing, done in minutes.<br>
+  <b>Edit Video as Fast as Typing</b>
+</p>
+
+<p align="center">
+  <b>Drag your Final Cut project in — you get a transcript.</b> Delete a line and that range is cut,<br>
+  captions are written for you, and the silence between words is trimmed automatically. Then back to Final Cut.<br>
   <b>Video and audio are always processed on your Mac.</b> Your footage never leaves your machine.
+</p>
+
+<p align="center">
+  <sub>📢 <b>FCP AutoCut is now TypeCut Pro</b> — only the name changed; your features, settings and projects are untouched.</sub>
 </p>
 
 <p align="center">
@@ -17,12 +25,12 @@
   <img src="https://img.shields.io/badge/Apple%20Silicon-M1%20or%20later-F05138?logo=apple&logoColor=white" alt="Apple Silicon only" />
   <img src="https://img.shields.io/badge/Final%20Cut%20Pro-12.2–12.3-8E44AD" alt="Final Cut Pro 12.2–12.3" />
   <img src="https://img.shields.io/badge/AI-on--device%20first-2E7D32" alt="On-device first AI" />
-  <img src="https://img.shields.io/github/v/release/groundroot/fcp-autocut?label=beta&color=1E6FD9" alt="Latest release" />
+  <img src="https://img.shields.io/github/v/release/groundroot/typecut-pro?label=beta&color=1E6FD9" alt="Latest release" />
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Proprietary-666666" alt="License: Proprietary" /></a>
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/en/main-window.png" width="820" alt="FCP AutoCut main window" />
+  <img src="docs/screenshots/en/main-window.png" width="820" alt="TypeCut Pro main window" />
   <br><sub>Main window — pick your speech-recognition, caption, and output options in the sidebar, drop your project onto the dashed box, done. Rarely-used options stay folded under <b>Advanced Options</b>.</sub>
 </p>
 
@@ -30,7 +38,7 @@
 
 ## Who it's for
 
-Anyone editing <b>talk-heavy long-form</b> in Final Cut Pro — interviews, lectures, sermons, podcasts, YouTube. The hours you spent cutting silence one gap at a time and typing captions by hand — **FCP AutoCut does that for you.** Results always come back as a **new project**, so your original stays untouched.
+Anyone editing <b>talk-heavy long-form</b> in Final Cut Pro — interviews, lectures, sermons, podcasts, YouTube. The hours you spent cutting silence one gap at a time and typing captions by hand — **TypeCut Pro does that for you.** Results always come back as a **new project**, so your original stays untouched.
 
 ## Download
 
@@ -47,9 +55,9 @@ Anyone editing <b>talk-heavy long-form</b> in Final Cut Pro — interviews, lect
 
 ---
 
-## Why FCP AutoCut
+## Why TypeCut Pro
 
-- **⚡ No export step** — other tools make you **render the video or extract audio** before they can transcribe. FCP AutoCut deletes that entire step: **drag the project you're editing** and it analyzes your cut timeline's audio directly — going straight from **caption generation to Text-Based Editing**.
+- **⚡ No export step** — other tools make you **render the video or extract audio** before they can transcribe. TypeCut Pro deletes that entire step: **drag the project you're editing** and it analyzes your cut timeline's audio directly — going straight from **caption generation to Text-Based Editing**.
 - **🔒 Video always stays on your Mac** — speech recognition, captions, and editing are on-device by default. Video and audio are never uploaded; only if you set the AI agent to a cloud model does the transcript text get sent.
 - **♻️ Fully non-destructive** — results always come back as a **new project**. Adjustment layers, B-roll, connected storylines, and your cut structure are preserved.
 - **🎬 Native to Final Cut** — captions are generated as **native FCP titles** from the start, so there's nothing to swap and nothing drifts on mixed frame rates.
@@ -129,7 +137,7 @@ Hand the editing to the AI on the left side of the Transcript Editor. **It never
   <br><sub>Subtitle Style — what you see in the preview matches <b>Final Cut's actual render 1:1</b>. Slider changes apply instantly.</sub>
 </p>
 
-- **No title swapping, ever** — with other tools, swapping the title style in FCP resets durations and wrecks the timeline. FCP AutoCut **generates captions with your chosen title's native values from the start**, so that never happens. **FCP 12.3 Subtitle titles + the Subtitles role** are supported too (select all, batch edit).
+- **No title swapping, ever** — with other tools, swapping the title style in FCP resets durations and wrecks the timeline. TypeCut Pro **generates captions with your chosen title's native values from the start**, so that never happens. **FCP 12.3 Subtitle titles + the Subtitles role** are supported too (select all, batch edit).
 - **Your own titles, as-is** — **drag a Final Cut title in, or pick one from the "Choose…" list**, and captions are generated in that title. Installed titles (built-in + third-party) are auto-scanned, with a cache so the list opens instantly.
 
 <p align="center">
@@ -177,7 +185,7 @@ Hand the editing to the AI on the left side of the Transcript Editor. **It never
 
 ## Install & first launch
 
-1. Open the DMG and drag **FCP AutoCut** into **Applications**
+1. Open the DMG and drag **TypeCut Pro** into **Applications**
 2. **Allow it once** — the beta isn't Apple-notarized yet, so macOS blocks the first launch:
    double-click the app → click **Done** on the alert → **System Settings → Privacy & Security** → **Open Anyway** → enter your password. From then on it opens normally.
 3. On first run the app downloads the AI speech model (~3.5GB) once — after that everything works offline.

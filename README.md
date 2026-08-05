@@ -1,29 +1,38 @@
 <p align="right">🇰🇷 <b>한국어</b> · <a href="README.en.md">🇺🇸 English</a> · <a href="README.ja.md">🇯🇵 日本語</a></p>
 
 <p align="center">
-  <img src="icon.png" width="128" alt="FCP AutoCut 앱 아이콘" />
+  <img src="icon.png" width="128" alt="TypeCut Pro 앱 아이콘" />
 </p>
 
-<h1 align="center">FCP AutoCut <sub>(beta)</sub></h1>
+<h1 align="center">TypeCut Pro <sub>(beta)</sub></h1>
 
 <p align="center">
-  <b>파이널컷 프로젝트를 드래그하면 — 무음을 잘라내고, 자막을 입히고, 대본까지 텍스트로 편집해</b><br>
-  다시 파이널컷으로 돌려주는 맥앱. 컷 편집의 지루한 뒷일을 몇 분으로 줄여줍니다.<br>
+  <b>타이핑하고 지우는 감각 그대로 영상을 편집하다</b><br>
+  <sub>Edit Video as Fast as Typing</sub>
+</p>
+
+<p align="center">
+  <b>파이널컷 프로젝트를 드래그하면 — 대본이 뜹니다.</b> 글을 지우면 그 구간이 잘리고,<br>
+  자막은 자동으로 만들어지고, 말 사이 침묵은 알아서 정리됩니다. 결과는 다시 파이널컷으로.<br>
   <b>영상·음성은 항상 내 Mac 안에서만 처리됩니다.</b> 외부 서버로 나가지 않습니다.
+</p>
+
+<p align="center">
+  <sub>📢 <b>FCP AutoCut이 TypeCut Pro가 되었습니다</b> — 이름만 바뀌었고, 쓰던 기능·설정·프로젝트는 그대로입니다.</sub>
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/macOS-14.0%2B-000000?logo=apple&logoColor=white" alt="macOS 14.0+" />
   <img src="https://img.shields.io/badge/Apple%20Silicon-M1%20이상%20전용-F05138?logo=apple&logoColor=white" alt="Apple Silicon 전용" />
-  <img src="https://img.shields.io/badge/Final%20Cut%20Pro-12.2–12.3-8E44AD" alt="Final Cut Pro 12.2–12.3" />
+  <img src="https://img.shields.io/badge/Final%20Cut%20Pro-11.1.1%20%C2%B7%2012.2–12.3-8E44AD" alt="Final Cut Pro 11.1.1 · 12.2–12.3" />
   <img src="https://img.shields.io/badge/AI-온디바이스%20우선-2E7D32" alt="온디바이스 우선 AI" />
-  <img src="https://img.shields.io/github/v/release/groundroot/fcp-autocut?label=beta&color=1E6FD9" alt="최신 버전" />
-  <img src="https://img.shields.io/github/downloads/groundroot/fcp-autocut/total?label=%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C&color=555" alt="총 다운로드" />
+  <img src="https://img.shields.io/github/v/release/groundroot/typecut-pro?label=beta&color=1E6FD9" alt="최신 버전" />
+  <img src="https://img.shields.io/github/downloads/groundroot/typecut-pro/total?label=%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C&color=555" alt="총 다운로드" />
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Proprietary-666666" alt="License: Proprietary" /></a>
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/main-window.png" width="820" alt="FCP AutoCut 메인 화면 — 옵션 사이드바와 드래그 존" />
+  <img src="docs/screenshots/main-window.png" width="820" alt="TypeCut Pro 메인 화면 — 옵션 사이드바와 드래그 존" />
   <br><sub>메인 화면 — 왼쪽 사이드바에서 음성 인식·자막·출력 옵션을 고르고, 프로젝트를 점선 박스에 떨어뜨리면 끝. 자주 안 쓰는 옵션은 <b>고급 옵션</b>에 접혀 있습니다.</sub>
 </p>
 
@@ -33,7 +42,7 @@
 
 인터뷰 · 강의 · 설교 · 팟캐스트 · 유튜브 같은 **말이 많은 롱폼**을 파이널컷으로 편집하는 분.
 말 사이의 침묵을 일일이 자르고, 자막을 손으로 치고, 필요 없는 부분을 골라내던 그 시간을
-**FCP AutoCut이 대신합니다.** 결과는 언제나 **새 프로젝트**로 돌려받으니 원본은 그대로예요.
+**TypeCut Pro가 대신합니다.** 결과는 언제나 **새 프로젝트**로 돌려받으니 원본은 그대로예요.
 
 ## 다운로드
 
@@ -43,7 +52,7 @@
 |---|---|
 | Mac | **Apple Silicon (M1 이상)** — Intel Mac 미지원 |
 | macOS | 14 (Sonoma) 이상 |
-| Final Cut Pro | 10.x ~ 12.3 |
+| Final Cut Pro | 11.1.1 · 12.2~12.3 동작 확인 (그 외 버전은 미확인/조건부 — [COMPATIBILITY.md](COMPATIBILITY.md)) |
 | 디스크 | 최초 1회 AI 음성 모델 약 **3.5GB** (선택 기능은 추가 다운로드) |
 
 > 💬 **베타 테스터 오픈채팅방** — 설치 도움 · 버그 제보 · 업데이트 소식 · 기능 요청은 여기로!
@@ -51,9 +60,9 @@
 
 ---
 
-## 왜 FCP AutoCut인가
+## 왜 TypeCut Pro인가
 
-- **⚡ 내보내기 과정이 없다** — 다른 도구는 음성 인식을 위해 **영상을 렌더링하거나 오디오를 따로 추출**해서 넣어야 하죠. FCP AutoCut은 그 과정이 통째로 사라집니다. **편집하던 프로젝트를 그대로 드래그**하면, 컷편집된 타임라인의 오디오를 그대로 분석해 **자막 생성부터 Text-Based Editing(대본 기반 편집)까지** 바로 이어집니다.
+- **⚡ 내보내기 과정이 없다** — 다른 도구는 음성 인식을 위해 **영상을 렌더링하거나 오디오를 따로 추출**해서 넣어야 하죠. TypeCut Pro는 그 과정이 통째로 사라집니다. **편집하던 프로젝트를 그대로 드래그**하면, 컷편집된 타임라인의 오디오를 그대로 분석해 **자막 생성부터 Text-Based Editing(대본 기반 편집)까지** 바로 이어집니다.
 - **🔒 영상은 항상 내 Mac에서** — 음성 인식·자막·편집은 기본적으로 온디바이스. 영상·음성은 밖으로 나가지 않으며, AI 에이전트를 클라우드 모델로 직접 설정한 경우에만 대본 텍스트가 전송됩니다.
 - **♻️ 완전 비파괴** — 결과는 항상 **새 프로젝트**로 나옵니다. 어저스트먼트 레이어·B롤·보조 스토리라인·컷 구조를 그대로 보존해요.
 - **🎬 파이널컷에 딱 맞게** — 자막이 처음부터 **FCP 네이티브 타이틀**로 만들어져 교체할 필요가 없고, 혼합 프레임레이트에서도 어긋나지 않습니다.
@@ -71,6 +80,8 @@
 ### ✂️ 무음컷 — 침묵만 걷어내기
 
 말과 말 사이의 빈 구간을 자동으로 찾아 잘라냅니다. **컷 강도(약~매우 강)**로 얼마나 촘촘히 자를지 고르고, 나머지 편집 구조는 손대지 않아요. 원본 타임라인은 그대로 두고, 무음을 제거해 **압축된 버전**을 따로 만들어 줍니다.
+
+**컴파운드·멀티캠 클립도 통째로 잘라냅니다** — 컨테이너 단위로 컷하므로 남는 조각의 날짜·마커·롤 설정이 그대로 보존됩니다.
 
 ### 💬 자막 자동화 — 말하는 대로, 정확하게
 
@@ -133,7 +144,7 @@
   <img src="docs/screenshots/subtitle-tuner.png" width="700" alt="자막 스타일 튜너 — 실시간 프리뷰와 슬라이더" />
   <br><sub>자막 스타일 — 프리뷰에서 본 크기·위치가 <b>파이널컷 실제 렌더와 1:1</b>. 슬라이더를 움직이면 즉시 반영됩니다.</sub>
 </p>
-- **교체가 필요 없는 타이틀** — 다른 도구의 자막은 FCP에서 타이틀을 바꾸면 길이가 리셋돼 타임라인이 어긋나죠. FCP AutoCut은 **원하는 타이틀 스타일을 처음부터 네이티브 값으로 생성**하므로 그럴 일이 없습니다. **FCP 12.3 전용 Subtitle 타이틀 + Subtitles 롤**도 지원(전체 선택·일괄 편집).
+- **교체가 필요 없는 타이틀** — 다른 도구의 자막은 FCP에서 타이틀을 바꾸면 길이가 리셋돼 타임라인이 어긋나죠. TypeCut Pro는 **원하는 타이틀 스타일을 처음부터 네이티브 값으로 생성**하므로 그럴 일이 없습니다. **FCP 12.3 전용 Subtitle 타이틀 + Subtitles 롤**도 지원(전체 선택·일괄 편집).
 - **내가 쓰는 타이틀 그대로** — 파이널컷 타이틀을 **드래그해서 놓거나 "고르기" 목록에서 선택**하면, 자막이 **그 타이틀로** 생성됩니다. Mac에 설치된 타이틀(내장 + 사용자 설치)을 자동 스캔하고, 캐시로 목록이 즉시 열립니다.
 
 <p align="center">
@@ -180,12 +191,12 @@
 
 ## 설치 & 첫 실행
 
-1. DMG를 열고 **FCP AutoCut**을 **Applications 폴더로** 드래그
+1. DMG를 열고 **TypeCut Pro**을 **Applications 폴더로** 드래그
 2. **보안 해제 (한 번만)** — 베타는 Apple 공증 전이라 처음에 macOS가 차단합니다
    1. 앱 더블클릭 → "열 수 없습니다" 경고에서 **[완료]**
    2. **시스템 설정 → 개인정보 보호 및 보안** → 아래로 스크롤
-   3. "'FCP AutoCut'이(가) 차단되었습니다" 옆 **[그래도 열기]** → **[열기]** → Mac 암호 입력
-   - 안 되면 터미널에서: `xattr -cr "/Applications/FCP AutoCut.app"`
+   3. "'TypeCut Pro'가 차단되었습니다" 옆 **[그래도 열기]** → **[열기]** → Mac 암호 입력
+   - 안 되면 터미널에서: `xattr -cr "/Applications/TypeCut Pro.app"`
 3. 앱 안내에 따라 AI 음성 모델 **[다운로드]** (최초 1회, 약 3.5GB — 진행률은 상단에 표시)
 4. **디스크 접근 권한 (한 번만)** — 미디어가 외장/NAS/다운로드 폴더에 있으면 온보딩 안내에 따라 전체 디스크 접근 권한을 켜주세요. **앱을 업데이트해도 권한·모델은 유지됩니다.**
 

@@ -1,15 +1,24 @@
 <p align="right"><a href="README.md">🇰🇷 한국어</a> · <a href="README.en.md">🇺🇸 English</a> · 🇯🇵 <b>日本語</b></p>
 
 <p align="center">
-  <img src="icon.png" width="128" alt="FCP AutoCutアプリアイコン" />
+  <img src="icon.png" width="128" alt="TypeCut Proアプリアイコン" />
 </p>
 
-<h1 align="center">FCP AutoCut <sub>(beta)</sub></h1>
+<h1 align="center">TypeCut Pro <sub>(beta)</sub></h1>
 
 <p align="center">
-  <b>Final Cutのプロジェクトをドラッグするだけで — 無音をカットし、字幕を付け、文字起こしをテキストとして編集し、</b><br>
-  再びFinal Cut Proに戻すMacアプリ。カット編集の面倒な後処理を数分に短縮します。<br>
+  <b>タイピングするように、映像を編集する</b><br>
+  <sub>Edit Video as Fast as Typing</sub>
+</p>
+
+<p align="center">
+  <b>Final Cutのプロジェクトをドラッグすると — 文字起こしが開きます。</b>テキストを消せばその区間がカットされ、<br>
+  字幕は自動で作られ、言葉の間の無音も自動で整理されます。結果は再びFinal Cut Proへ。<br>
   <b>映像・音声はあなたのMacの中だけで処理されます。</b>外部サーバーには送信されません。
+</p>
+
+<p align="center">
+  <sub>📢 <b>FCP AutoCutはTypeCut Proになりました</b> — 名前が変わっただけで、機能・設定・プロジェクトはそのままです。</sub>
 </p>
 
 <p align="center">
@@ -17,13 +26,13 @@
   <img src="https://img.shields.io/badge/Apple%20Silicon-M1%20%E4%BB%A5%E9%99%8D%E5%B0%82%E7%94%A8-F05138?logo=apple&logoColor=white" alt="Apple Silicon専用" />
   <img src="https://img.shields.io/badge/Final%20Cut%20Pro-11.1.1%20%C2%B7%2012.2–12.3-8E44AD" alt="Final Cut Pro 11.1.1 · 12.2–12.3" />
   <img src="https://img.shields.io/badge/AI-%E3%82%AA%E3%83%B3%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E5%84%AA%E5%85%88-2E7D32" alt="オンデバイス優先AI" />
-  <img src="https://img.shields.io/github/v/release/groundroot/fcp-autocut?label=beta&color=1E6FD9" alt="最新バージョン" />
-  <img src="https://img.shields.io/github/downloads/groundroot/fcp-autocut/total?label=%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89&color=555" alt="総ダウンロード数" />
+  <img src="https://img.shields.io/github/v/release/groundroot/typecut-pro?label=beta&color=1E6FD9" alt="最新バージョン" />
+  <img src="https://img.shields.io/github/downloads/groundroot/typecut-pro/total?label=%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89&color=555" alt="総ダウンロード数" />
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Proprietary-666666" alt="License: Proprietary" /></a>
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/en/main-window.png" width="820" alt="FCP AutoCutメイン画面 — オプションのサイドバーとドラッグゾーン" />
+  <img src="docs/screenshots/en/main-window.png" width="820" alt="TypeCut Proメイン画面 — オプションのサイドバーとドラッグゾーン" />
   <br><sub>メイン画面 — 左のサイドバーで音声認識・字幕・出力オプションを選び、プロジェクトを点線ボックスにドロップするだけ。あまり使わないオプションは<b>詳細オプション（Advanced Options）</b>に折りたたまれています。</sub>
 </p>
 
@@ -33,7 +42,7 @@
 
 インタビュー・講義・説教・ポッドキャスト・YouTubeなど、**話し言葉の多い長尺動画**をFinal Cut Proで編集している方。
 話の合間の沈黙をひとつずつ切り取り、字幕を手入力し、不要な部分を選り分けていた時間を、
-**FCP AutoCutが肩代わりします。** 結果はいつでも**新しいプロジェクト**として返ってくるので、元のプロジェクトはそのままです。
+**TypeCut Proが肩代わりします。** 結果はいつでも**新しいプロジェクト**として返ってくるので、元のプロジェクトはそのままです。
 
 ## ダウンロード
 
@@ -52,9 +61,9 @@
 
 ---
 
-## なぜFCP AutoCutなのか
+## なぜTypeCut Proなのか
 
-- **⚡ 書き出しの手間がありません** — 他のツールでは音声認識のために**動画をレンダリングしたり、音声を別途抽出**して読み込ませる必要があります。FCP AutoCutならその工程がまるごと不要です。**編集中のプロジェクトをそのままドラッグ**すれば、カット編集済みタイムラインの音声をそのまま解析し、**字幕生成からText-Based Editing（テキストベース編集）まで**そのまま進めます。
+- **⚡ 書き出しの手間がありません** — 他のツールでは音声認識のために**動画をレンダリングしたり、音声を別途抽出**して読み込ませる必要があります。TypeCut Proならその工程がまるごと不要です。**編集中のプロジェクトをそのままドラッグ**すれば、カット編集済みタイムラインの音声をそのまま解析し、**字幕生成からText-Based Editing（テキストベース編集）まで**そのまま進めます。
 - **🔒 映像はあなたのMacの中に** — 音声認識・字幕生成・編集は基本的にオンデバイスで動作します。映像・音声が外部に出ることはなく、AIエージェントをクラウドモデルに自分で設定した場合だけ文字起こしテキストが送信されます。
 - **♻️ 完全非破壊** — 結果は必ず**新しいプロジェクト**として出力されます。アジャストメントレイヤー・Bロール・セカンダリストーリーライン・カット構造はそのまま保持されます。
 - **🎬 Final Cut Proにぴったり** — 字幕は最初から**FCPネイティブタイトル**として生成されるので差し替えは不要で、混合フレームレートでもずれません。
@@ -134,7 +143,7 @@
   <img src="docs/screenshots/en/subtitle-tuner.png" width="700" alt="字幕スタイルチューナー — リアルタイムプレビューとスライダー" />
   <br><sub>字幕スタイル — プレビューで見たサイズ・位置が<b>Final Cut Proの実際のレンダリングと1:1</b>。スライダーを動かせばすぐ反映されます。</sub>
 </p>
-- **差し替え不要のタイトル** — 他のツールの字幕は、FCPでタイトルを変えると長さがリセットされてタイムラインがずれることがあります。FCP AutoCutは**希望のタイトルスタイルを最初からネイティブ値で生成**するので、その心配がありません。**FCP 12.3のSubtitleタイトル + Subtitlesロール**にも対応（一括選択・一括編集）。
+- **差し替え不要のタイトル** — 他のツールの字幕は、FCPでタイトルを変えると長さがリセットされてタイムラインがずれることがあります。TypeCut Proは**希望のタイトルスタイルを最初からネイティブ値で生成**するので、その心配がありません。**FCP 12.3のSubtitleタイトル + Subtitlesロール**にも対応（一括選択・一括編集）。
 - **自分のタイトルそのままに** — Final Cut Proのタイトルを**ドラッグして置くか、「選択」リストから選ぶ**と、字幕が**そのタイトルで**生成されます。Macにインストールされたタイトル（内蔵 + ユーザーインストール）を自動スキャンし、キャッシュでリストがすぐ開きます。
 
 <p align="center">
@@ -181,11 +190,11 @@
 
 ## インストール & 初回起動
 
-1. DMGを開き、**FCP AutoCut**を**Applicationsフォルダへ**ドラッグ
+1. DMGを開き、**TypeCut Pro**を**Applicationsフォルダへ**ドラッグ
 2. **セキュリティの解除（1回だけ）** — ベータ版はAppleの公証を受ける前のため、最初にmacOSがブロックします
    1. アプリをダブルクリック → 「開けません」という警告で**[OK]**
    2. **システム設定 → プライバシーとセキュリティ** → 下へスクロール
-   3. 「"FCP AutoCut"はブロックされました」の横にある**[このまま開く]** → **[開く]** → Macのパスワードを入力
+   3. 「"TypeCut Pro"はブロックされました」の横にある**[このまま開く]** → **[開く]** → Macのパスワードを入力
 3. アプリの案内に従ってAI音声モデルを**[ダウンロード]**（初回1回、約3.5GB — 進行率は上部に表示）
 4. **ディスクアクセス権限（1回だけ）** — メディアが外付けドライブ・NAS・ダウンロードフォルダにある場合は、オンボーディングの案内に従ってフルディスクアクセスをオンにしてください。**アプリをアップデートしても権限・モデルは維持されます。**
 
