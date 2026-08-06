@@ -31,7 +31,7 @@
 
 <p align="center">
   <img src="docs/screenshots/en/main-window.png" width="820" alt="TypeCut Pro main window" />
-  <br><sub>Main window — pick your speech-recognition, caption, and output options in the sidebar, drop your project onto the dashed box, done. Rarely-used options stay folded under <b>Advanced Options</b>.</sub>
+  <br><sub>Main window — drop your Final Cut project <b>anywhere in the window</b>, pick your speech-recognition, caption and output options on the right, then hit <b>Start analysis</b>. Rarely-used options stay folded under <b>Details</b>.</sub>
 </p>
 
 ---
@@ -92,12 +92,13 @@ When analysis finishes, the same window turns into the **transcript editor** in 
 
 <p align="center">
   <img src="docs/screenshots/en/transcript-editor.png" width="820" alt="Transcript editor — transcript, preview, waveform, AI agent" />
-  <br><sub>Transcript editor — the <b>transcript</b> in the middle, <b>video preview</b> (live captions) on the right, <b>waveform</b> below, and the <b>AI Agent</b> on the left.</sub>
+  <br><sub>Transcript editor — the <b>transcript</b> on the left, the <b>video viewer</b> (live captions) in the middle, the <b>AI Agent / Captions &amp; Output</b> tabs on the right, and the <b>waveform</b> below.</sub>
 </p>
 
 - **Like a document** — drag to select, click to play from there, **double-click to fix a word in place**. Readable paragraphs per sentence, plus **Reading view** (large type) and **Full view**.
 - **Delete = cut** — deleted spans are cut from the exported timeline (captions untouched), and playback **skips them automatically**.
 - **One-click cleanup** — Silence Cut and Filler Cut buttons for the whole transcript.
+- **Split a word where you want it (v0.13.0)** — when speech recognition glued words together, put the cursor inside the word and press **⇧⏎** to split it there. Press **⏎** between the pieces and the caption card splits too; **⌫** at the seam undoes it. The original text and timecodes are preserved.
 - **Preview + waveform** — watch with captions on the side; click the waveform to jump, and the text scrolls along. **Space plays from the cursor.**
 
 #### 💬 Caption view — polish caption by caption (CapCut style)
@@ -111,12 +112,12 @@ Prefer working with caption cards instead of prose? Switch to Caption View in th
 
 - **One card = one caption** exactly as it will export, numbered so the flow is easy to scan.
 - **⌫ at the start of a caption** merges it with the previous one. **⌘Enter** splits at the cursor. Arrow keys move between cards.
-- The toolbar **length slider + 2-line toggle** reflows the entire set instantly — synced with the sidebar's Subtitle Style.
+- The toolbar **caption length + 2-line toggle** reflows the entire set instantly — synced with Subtitle Style in the **Captions & Output** tab on the right.
 - Your merges and splits **carry through to the exported result**.
 
 ### 🤖 AI Agent — tell it, and it edits
 
-Hand the editing to the AI on the left side of the Transcript Editor. **It never rewrites your text — it only cuts what you ask**, and every result can be reviewed and restored.
+Hand the editing to the AI in the **AI** tab on the right of the Transcript Editor. **It never rewrites your text — it only cuts what you ask**, and every result can be reviewed and restored.
 
 - **Summarize & extract** — "keep the essentials" · "down to 5 minutes" · "1-minute cut", or free-form like *"keep only the sales talk"*. Sentences are scored by importance and kept **essentials-first** to hit the target length.
 - **Google SEO outline** — organizes the transcript under **H2/H3 headings** with a table of contents; **delete whole sections** from the outline to shape the story fast.
