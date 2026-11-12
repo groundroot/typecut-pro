@@ -98,6 +98,7 @@ kbd{font-family:var(--sans);font-size:.8em;font-weight:600;display:inline-flex;a
 .demo-tools kbd{font-size:.75rem;height:1.7em;min-width:1.7em}
 .script{touch-action:pan-y;padding:18px 0 6px;font-size:1.24rem;line-height:1.95;font-weight:500;user-select:none;-webkit-user-select:none;border-radius:8px;outline-offset:6px}
 .script p+p{margin-top:2px}
+.script:focus-visible{outline:1px solid var(--line-2)}
 .w{display:inline-block;padding:0 3px;margin:0 -1px;border-radius:5px;cursor:pointer;transition:background .12s,color .12s}
 .w:hover{background:rgba(255,238,220,.08)}
 .w.f{text-decoration:underline dotted var(--led-off);text-underline-offset:6px;text-decoration-thickness:2px}
