@@ -12,6 +12,8 @@
 !docs/en/
 !docs/en/**
 !docs/index.html
+!docs/site.css
+!docs/site.js
 !docs/icon.png
 !docs/og-image.png
 !LICENSE
