@@ -28,10 +28,7 @@
   }catch(e){}
 })();
 </script>
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Doto:wght@700..900&display=swap">
+<link rel="stylesheet" href="fonts/fonts.css">
 <link rel="stylesheet" href="site.css">
 </head>
 <body>
@@ -72,18 +69,10 @@
       <div class="demo-bar">
         <span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>
         <span class="demo-title">카페_인터뷰_2부.fcpxmld</span>
-        <span class="stages" aria-hidden="true"><b>대본 편집</b><span>자막 편집</span><span>스타일</span><span>출력</span></span>
       </div>
-      <div class="demo-body">
-        <div class="demo-script">
-          <div class="demo-tools">
-            <button type="button" data-act="cut" disabled>영상에서 자르기 <kbd>⌫</kbd></button>
-            <button type="button" data-act="fillers">군소리 지우기</button>
-            <button type="button" data-act="silence">무음 걷어내기</button>
-            <button type="button" data-act="undo" disabled>되돌리기 <kbd>⌘Z</kbd></button>
-          </div>
-          <div class="script" id="script" tabindex="0" role="group" aria-label="예시 대본. 화살표 키로 낱말을 옮기고, Shift로 범위를 고르고, Delete로 자릅니다."></div>
-          <p class="demo-hint" id="hint" aria-live="polite">낱말을 눌러 고르고 ⌫를 눌러 보세요. 끌면 여러 낱말이 골라집니다.</p>
+      <div class="meter">
+        <div class="tl" aria-hidden="true">
+          <div class="tl-track" id="track"></div>
         </div>
         <aside class="slate" aria-label="길이">
           <dl>
@@ -93,8 +82,15 @@
           </dl>
         </aside>
       </div>
-      <div class="tl" aria-hidden="true">
-        <div class="tl-track" id="track"></div>
+      <div class="demo-script">
+        <div class="demo-tools">
+          <button type="button" data-act="cut" disabled>영상에서 자르기 <kbd>⌫</kbd></button>
+          <button type="button" data-act="fillers">군소리 지우기</button>
+          <button type="button" data-act="silence">무음 걷어내기</button>
+          <button type="button" data-act="undo" disabled>되돌리기 <kbd>⌘Z</kbd></button>
+        </div>
+        <div class="script" id="script" tabindex="0" role="group" aria-label="예시 대본. 화살표 키로 낱말을 옮기고, Shift로 범위를 고르고, Delete로 자릅니다."></div>
+        <p class="demo-hint" id="hint" aria-live="polite">버린 테이크 한 줄을 골라 두었습니다. ⌫를 누르면 영상에서 잘립니다.</p>
       </div>
     </div>
     <p class="demo-note">직접 만져 볼 수 있는 축소 데모입니다. 대본은 설명을 위해 만든 예시입니다.</p>
@@ -157,7 +153,7 @@
       <div><dt><kbd>⌘</kbd><kbd>Z</kbd></dt><dd>한 번에 한 단계씩 되돌리기</dd></div>
       <div><dt><kbd>⌘</kbd><kbd>F</kbd></dt><dd>찾기와 바꾸기</dd></div>
       <div><dt><kbd>⌘</kbd><kbd>K</kbd></dt><dd>명령 팔레트</dd></div>
-      <div><dt><kbd>⌘</kbd><kbd>X</kbd><span class="then" aria-hidden="true">→</span><kbd>⌘</kbd><kbd>V</kbd></dt><dd>문단을 옮기면 영상 순서도 이동</dd></div>
+      <div><dt><kbd>⌘</kbd><kbd>X</kbd><svg class="then" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2.5 8h10.6m0 0L9.6 4.6M13.1 8l-3.5 3.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><kbd>⌘</kbd><kbd>V</kbd></dt><dd>문단을 옮기면 영상 순서도 이동</dd></div>
     </dl>
   </div>
 </section>
@@ -174,10 +170,12 @@
       <article class="cell">
         <h3>원본은 그대로</h3>
         <p>결과는 언제나 새 프로젝트입니다. 원본 XML과 원본 미디어는 건드리지 않고, 모든 편집은 되돌릴 수 있습니다.</p>
+        <div class="pair" aria-hidden="true"><span>원본 프로젝트 · 그대로</span><span class="on">새 프로젝트</span></div>
       </article>
       <article class="cell">
         <h3>화자마다 다른 색과 롤</h3>
         <p>화자를 나눠 색과 롤을 붙이고, 자막 타이틀을 스토리라인 한 줄로 묶어 통째로 옮길 수 있습니다.</p>
+        <div class="spk" aria-hidden="true"><span class="s1" style="flex:5">화자 1</span><span class="s2" style="flex:3">화자 2</span><span class="s1" style="flex:4">화자 1</span></div>
       </article>
       <article class="cell cell-wide cell-fix">
         <div>

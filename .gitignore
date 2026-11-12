@@ -14,6 +14,8 @@
 !docs/index.html
 !docs/site.css
 !docs/site.js
+!docs/fonts/
+!docs/fonts/**
 !docs/icon.png
 !docs/og-image.png
 !LICENSE

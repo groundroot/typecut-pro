@@ -19,10 +19,7 @@
 <link rel="alternate" hreflang="en" href="https://groundroot.github.io/typecut-pro/en/">
 <link rel="alternate" hreflang="x-default" href="https://groundroot.github.io/typecut-pro/en/">
 <link rel="icon" href="../icon.png">
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Doto:wght@700..900&display=swap">
+<link rel="stylesheet" href="../fonts/fonts.css">
 <link rel="stylesheet" href="../site.css">
 </head>
 <body>
@@ -63,18 +60,10 @@
       <div class="demo-bar">
         <span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>
         <span class="demo-title">Cafe_Interview_Pt2.fcpxmld</span>
-        <span class="stages" aria-hidden="true"><b>Script</b><span>Subtitles</span><span>Style</span><span>Export</span></span>
       </div>
-      <div class="demo-body">
-        <div class="demo-script">
-          <div class="demo-tools">
-            <button type="button" data-act="cut" disabled>Cut from video <kbd>⌫</kbd></button>
-            <button type="button" data-act="fillers">Remove fillers</button>
-            <button type="button" data-act="silence">Remove silence</button>
-            <button type="button" data-act="undo" disabled>Undo <kbd>⌘Z</kbd></button>
-          </div>
-          <div class="script" id="script" tabindex="0" role="group" aria-label="Sample transcript. Arrow keys move between words, Shift extends the selection, Delete cuts."></div>
-          <p class="demo-hint" id="hint" aria-live="polite">Click a word, then press ⌫. Drag to select several.</p>
+      <div class="meter">
+        <div class="tl" aria-hidden="true">
+          <div class="tl-track" id="track"></div>
         </div>
         <aside class="slate" aria-label="Duration">
           <dl>
@@ -84,8 +73,15 @@
           </dl>
         </aside>
       </div>
-      <div class="tl" aria-hidden="true">
-        <div class="tl-track" id="track"></div>
+      <div class="demo-script">
+        <div class="demo-tools">
+          <button type="button" data-act="cut" disabled>Cut from video <kbd>⌫</kbd></button>
+          <button type="button" data-act="fillers">Remove fillers</button>
+          <button type="button" data-act="silence">Remove silence</button>
+          <button type="button" data-act="undo" disabled>Undo <kbd>⌘Z</kbd></button>
+        </div>
+        <div class="script" id="script" tabindex="0" role="group" aria-label="Sample transcript. Arrow keys move between words, Shift extends the selection, Delete cuts."></div>
+        <p class="demo-hint" id="hint" aria-live="polite">One discarded take is already selected. Press ⌫ to cut it from the video.</p>
       </div>
     </div>
     <p class="demo-note">A small working demo. The transcript is a made-up example.</p>
@@ -148,7 +144,7 @@
       <div><dt><kbd>⌘</kbd><kbd>Z</kbd></dt><dd>Undo, one step at a time</dd></div>
       <div><dt><kbd>⌘</kbd><kbd>F</kbd></dt><dd>Find and replace</dd></div>
       <div><dt><kbd>⌘</kbd><kbd>K</kbd></dt><dd>Command palette</dd></div>
-      <div><dt><kbd>⌘</kbd><kbd>X</kbd><span class="then" aria-hidden="true">→</span><kbd>⌘</kbd><kbd>V</kbd></dt><dd>Move a paragraph and the video follows</dd></div>
+      <div><dt><kbd>⌘</kbd><kbd>X</kbd><svg class="then" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2.5 8h10.6m0 0L9.6 4.6M13.1 8l-3.5 3.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><kbd>⌘</kbd><kbd>V</kbd></dt><dd>Move a paragraph and the video follows</dd></div>
     </dl>
   </div>
 </section>
@@ -165,10 +161,12 @@
       <article class="cell">
         <h3>Your original stays untouched</h3>
         <p>The result is always a new project. The source XML and media are never modified, and every edit can be undone.</p>
+        <div class="pair" aria-hidden="true"><span>Original project · unchanged</span><span class="on">New project</span></div>
       </article>
       <article class="cell">
         <h3>A color and a role for each speaker</h3>
         <p>Speakers get their own color and role, and subtitle titles can be grouped into one storyline you can move as a unit.</p>
+        <div class="spk" aria-hidden="true"><span class="s1" style="flex:5">Speaker 1</span><span class="s2" style="flex:3">Speaker 2</span><span class="s1" style="flex:4">Speaker 1</span></div>
       </article>
       <article class="cell cell-wide cell-fix">
         <div>
