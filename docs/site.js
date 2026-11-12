@@ -4,15 +4,15 @@
     ko: {
       // '*'로 끝나는 낱말은 군소리. 숫자는 문장 뒤 무음(초). retake는 버린 테이크 줄.
       lines: [
-        ['어* 처음 가게를 열었을 때는 음* 솔직히 하루에 열 잔도 못 팔았어요.', 1.1],
-        ['그래서 메뉴를 전부 다시 짰습니다.', 1.6],
         ['원두를 직접 볶기 시작한 게 그러니까* 삼 년 전 겨울이었고요.', 0.7],
         ['아 잠깐만요, 다시 할게요.', 1.9],
         ['원두를 직접 볶기 시작한 건 삼 년 전 겨울입니다.', 0.8],
+        ['어* 처음에는 음* 솔직히 하루에 열 잔도 못 팔았어요.', 1.1],
+        ['그래서 메뉴를 전부 다시 짰습니다.', 1.6],
         ['지금은 어* 주말이면 줄을 서서 기다리는 분들이 생겼어요.', 1.3],
         ['결국 맛은 음* 숫자가 아니라 매일 같은 시간에 문을 여는 데서 나오더라고요.', 0]
       ],
-      retake: 3,
+      retake: 1,
       start: '버린 테이크 한 줄을 골라 두었습니다. ⌫를 누르면 영상에서 잘립니다.',
       startTouch: '버린 테이크 한 줄을 골라 두었습니다. ‘영상에서 자르기’를 눌러 보세요.',
       idle: '낱말을 눌러 고르고 ⌫를 눌러 보세요. 끌면 여러 낱말이 골라집니다.',
@@ -27,15 +27,15 @@
     },
     en: {
       lines: [
-        ['Um* when we first opened, uh* honestly we sold maybe ten cups a day.', 1.1],
-        ['So we rebuilt the whole menu.', 1.6],
         ['We started roasting our own beans, like* three winters ago, and.', 0.7],
         ['Sorry, hold on, let me say that again.', 1.9],
         ['We started roasting our own beans three winters ago.', 0.8],
+        ['Um* at first, uh* honestly we sold maybe ten cups a day.', 1.1],
+        ['So we rebuilt the whole menu.', 1.6],
         ['Now, um* on weekends people actually line up outside.', 1.3],
         ['In the end, uh* taste comes from opening the door at the same time every day.', 0]
       ],
-      retake: 3,
+      retake: 1,
       start: 'One discarded take is already selected. Press ⌫ to cut it from the video.',
       startTouch: 'One discarded take is already selected. Tap “Cut from video”.',
       idle: 'Click a word, then press ⌫. Drag to select several.',
@@ -202,17 +202,15 @@
   // 버튼을 누른 뒤에도 ⌘Z·⌫가 듣도록 초점을 대본으로 돌려놓는다
   function refocus() { try { script.focus({ preventScroll: true }); } catch (e) { script.focus(); } }
 
-  var dragging = false;
+  var dragging = false, tap = null;
+  // 포인터로 누른 뒤 돌려준 초점에는 테두리를 그리지 않는다 — 키보드를 쓰면 다시 보인다
+  function quiet(on) { script.classList.toggle('quiet', on); }
   function wordAt(e) { var el = e.target.closest ? e.target.closest('.w') : null; return el ? +el.getAttribute('data-w') : -1; }
   script.addEventListener('pointerdown', function (e) {
-    var w = wordAt(e); touched = true;
+    var w = wordAt(e);
+    if (e.pointerType === 'touch') { tap = w < 0 ? null : { w: w, x: e.clientX, y: e.clientY, id: e.pointerId }; return; }
+    touched = true; quiet(true);
     if (w < 0) { clear(); return; }
-    if (e.pointerType === 'touch') {
-      // 터치: 끌면 화면이 밀린다 — 첫 낱말, 그다음 낱말을 차례로 눌러 범위를 고른다
-      if (anchor >= 0 && anchor === caret && w !== anchor) select(anchor, w);
-      else select(w, w);
-      return;
-    }
     dragging = true;
     select(e.shiftKey && caret >= 0 ? (anchor < 0 ? caret : anchor) : w, w);
   });
@@ -223,10 +221,19 @@
     if (w && +w.getAttribute('data-w') !== caret) select(anchor, +w.getAttribute('data-w'));
   });
   function endDrag() { dragging = false; }
+  // 터치: 첫 낱말, 그다음 낱말을 차례로 톡 눌러 범위를 고른다. 밀면(10px 넘게) 아무 일도 없다
+  script.addEventListener('pointerup', function (e) {
+    var t0 = tap; tap = null;
+    if (!t0 || e.pointerId !== t0.id || Math.abs(e.clientX - t0.x) > 10 || Math.abs(e.clientY - t0.y) > 10) return;
+    touched = true; quiet(true);
+    if (anchor >= 0 && anchor === caret && t0.w !== anchor) select(anchor, t0.w);
+    else select(t0.w, t0.w);
+  });
   window.addEventListener('pointerup', endDrag);
   window.addEventListener('pointercancel', endDrag);
   demo.addEventListener('keydown', function (e) {
     var k = e.key, inScript = e.target === script;
+    quiet(false);
     if ((e.metaKey || e.ctrlKey) && k.toLowerCase() === 'z') { touched = true; undo(); e.preventDefault(); return; }
     if (!inScript) return;
     touched = true;
@@ -240,7 +247,7 @@
       cutSelection(); e.preventDefault();
     } else if (k === 'Escape') clear();
   });
-  function onBtn(name, fn) { btn[name].addEventListener('click', function () { touched = true; fn(); refocus(); }); }
+  function onBtn(name, fn) { btn[name].addEventListener('click', function (e) { touched = true; fn(); quiet(e.detail > 0); refocus(); }); }
   onBtn('cut', function () { cutSelection(); });
   onBtn('undo', undo);
   onBtn('fillers', function () { apply(segs.map(function (s, i) { return s.filler ? i : -1; }).filter(function (i) { return i >= 0; })); });
